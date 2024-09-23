@@ -35,8 +35,20 @@ NS_ASSUME_NONNULL_BEGIN
 /** Add/Remove the interior vertical grid lines. */
 @property (nonatomic, assign) BOOL displayVerticalGridLines;
 
+/** Hides the outer lines. */
+@property (nonatomic, assign) BOOL outerLinesHidden;
+
+/** Hides the corner lines. */
+@property (nonatomic, assign) BOOL cornerLinesHidden;
+
 /** Shows and hides the interior grid lines with an optional crossfade animation. */
 - (void)setGridHidden:(BOOL)hidden animated:(BOOL)animated;
+
+/** Shows and hides the outer lines. */
+- (void)setOuterLinesHidden:(BOOL)hidden;
+
+/** Shows and hides the corner lines. */
+- (void)setCornerLinesHidden:(BOOL)hidden;
 
 @end
 

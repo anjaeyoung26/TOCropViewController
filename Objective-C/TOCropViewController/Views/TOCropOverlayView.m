@@ -182,6 +182,27 @@ static const CGFloat kTOCropOverLayerCornerWidth = 20.0f;
     }];
 }
 
+- (void)setOuterLinesHidden:(BOOL)hidden
+{
+  _outerLinesHidden = hidden;
+  
+  for (UIView *lineView in self.outerLineViews) {
+    lineView.alpha = hidden ? 0.0f : 1.0f;
+  }
+}
+
+- (void)setCornerLinesHidden:(BOOL)hidden
+{
+  _cornerLinesHidden = hidden;
+  
+  NSArray *cornerLines = @[self.topLeftLineViews, self.topRightLineViews, self.bottomRightLineViews, self.bottomLeftLineViews];
+  for (NSInteger i = 0; i < 4; i++) {
+    NSArray<UIView *> *cornerLine = cornerLines[i];
+    cornerLine[0].alpha = hidden ? 0.0f : 1.0f;
+    cornerLine[1].alpha = hidden ? 0.0f : 1.0f;
+  }
+}
+
 #pragma mark - Property methods
 
 - (void)setDisplayHorizontalGridLines:(BOOL)displayHorizontalGridLines {
