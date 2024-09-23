@@ -28,7 +28,7 @@
 
 static const CGFloat kTOCropViewPadding = 14.0f;
 static const NSTimeInterval kTOCropTimerDuration = 0.8f;
-static const CGFloat kTOCropViewMinimumBoxSize = 42.0f;
+static const CGFloat kTOCropViewMinimumBoxSize = 3.0f;
 static const CGFloat kTOMaximumZoomScale = 15.0f;
 
 /* When the user taps down to resize the box, this state is used
